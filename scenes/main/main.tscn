@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://2ejdpbs2kv48" path="res://resources/tileset.tres" id="1_e8drp"]
 [ext_resource type="PackedScene" uid="uid://dlx8vugiu28uc" path="res://scenes/game_object/player/player.tscn" id="1_rhukg"]
 [ext_resource type="PackedScene" path="res://scenes/manager/enemy_manager.tscn" id="1_sa7fq"]
-[ext_resource type="PackedScene" path="res://scenes/game_object/game_camera/game_camera.tscn" id="1_u6ine"]
+[ext_resource type="PackedScene" uid="uid://cpakvtpnigm7v" path="res://scenes/game_object/game_camera/game_camera.tscn" id="1_u6ine"]
 [ext_resource type="PackedScene" uid="uid://dpdulvujaeqwg" path="res://scenes/ui/experience_bar.tscn" id="2_6ulrl"]
 [ext_resource type="PackedScene" uid="uid://8lcubii7xrb8" path="res://scenes/manager/arena_time_manager.tscn" id="2_46bpq"]
 [ext_resource type="PackedScene" uid="uid://bl8sp05okhq22" path="res://scenes/manager/experience_manager.tscn" id="4_012wb"]
