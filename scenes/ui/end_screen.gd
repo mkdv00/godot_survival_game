@@ -7,6 +7,11 @@ func _ready():
 	$%QuitButton.pressed.connect(on_quit_button_pressed)
 
 
+func set_defeat():
+	$%TitleLabel.text = "Defeat"
+	$%DescriptionLabel.text = "You lost!"
+
+
 func on_restart_button_pressed():
 	# Restart the main scene
 	get_tree().paused = false
