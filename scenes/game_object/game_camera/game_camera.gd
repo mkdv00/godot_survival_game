@@ -18,8 +18,6 @@ func acquire_target():
 	# Get first node of player group in main node
 	var player_nodes = get_tree().get_nodes_in_group("player")
 	
-	print(player_nodes.size())
-	
 	# Check that player node is exist in main node
 	if player_nodes.size() > 0:
 		# Calculating the position of the target (Player)
