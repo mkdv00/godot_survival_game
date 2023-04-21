@@ -8,8 +8,8 @@ func _ready():
 
 
 func set_defeat():
-	$%TitleLabel.text = "Defeat"
-	$%DescriptionLabel.text = "You lost!"
+	$%TitleLabel.text = "Проигрыш"
+	$%DescriptionLabel.text = "Вы проиграли!"
 
 
 func on_restart_button_pressed():
