@@ -53,6 +53,7 @@ func on_timer_timeout():
 	sword_instance.hitbox_component.damage = damage
 	
 	sword_instance.global_position = enemies[0].global_position
+	# Make degrees in TAU - 2 Pi in radians
 	sword_instance.global_position += Vector2.RIGHT.rotated(randf_range(0, TAU)) * 4
 	
 	# Get angle from enemy direction and sword direction
