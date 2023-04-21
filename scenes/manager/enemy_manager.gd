@@ -18,6 +18,34 @@ func _ready():
 	arena_timer_manager.arena_dificulty_increased.connect(on_arena_dificulty_increased)
 
 
+func get_spawn_position():
+	# Get first node of player group in main node
+	var player = get_tree().get_first_node_in_group("player") as Node2D
+	
+	# Check that player node is exist in main node
+	if player == null:
+		return Vector2.ZERO
+	
+	var spawn_position = Vector2.ZERO
+	# Random direction from 0 degrees to 360 degrees (TAU)
+	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
+	for i in 4:
+		# Get random spawn position for the enemy
+		spawn_position = player.global_position + (random_direction * spawn_radius)
+		
+		# Check rectangles in arena for spawn enemies only in arena
+		var query_parameters = PhysicsRayQueryParameters2D.create(player.global_position, spawn_position, 1)
+		var result = get_tree().root.world_2d.direct_space_state.intersect_ray(query_parameters)
+	
+		if result.is_empty():
+			break
+		else:
+			# Spawn enemies in 90 degres
+			random_direction = random_direction.rotated(deg_to_rad(90))
+	
+	return spawn_position
+
+
 func on_timer_timeout():
 	# Restart timer
 	timer.start()
@@ -29,17 +57,12 @@ func on_timer_timeout():
 	if player == null:
 		return
 	
-	# Random direction from 0 degrees to 360 degrees (TAU)
-	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
-	# Get random spawn position for the enemy
-	var spawn_position = player.global_position + (random_direction * spawn_radius)
-	
 	# Create enemy instance and add to the EnemyManager node
 	var enemy = basic_enemy_scene.instantiate() as Node2D
 	
 	var enteties_layer = get_tree().get_first_node_in_group("enteties_layer")
 	enteties_layer.add_child(enemy)
-	enemy.global_position = spawn_position
+	enemy.global_position = get_spawn_position()
 
 
 func on_arena_dificulty_increased(arena_dificulty: int):
