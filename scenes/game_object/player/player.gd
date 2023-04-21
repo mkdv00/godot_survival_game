@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var health_component = $HealthComponent
 @onready var health_bar = $HealthBar
 @onready var abiliteis = $Abilities
+@onready var animation_player = $AnimationPlayer
+@onready var visuals = $Visuals
 
 # Smooth the player movement
 const ACCELERATION_SMOOTHING = 25
@@ -38,6 +40,17 @@ func _process(delta):
 	
 	# Apply velocity
 	move_and_slide()
+	
+	if movement_vector.x != 0 or movement_vector.y != 0:
+		animation_player.play("walk")
+	else:
+		animation_player.play("RESET")
+	
+	var move_sign = sign(movement_vector.x)
+	if move_sign == 0:
+		visuals.scale = Vector2.ONE
+	else:
+		visuals.scale = Vector2(move_sign, 1)
 
 
 func get_movement_vector():
