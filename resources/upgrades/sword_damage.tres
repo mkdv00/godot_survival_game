@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://b6k3dflw27y1a"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_asf6o"]
+
+[resource]
+script = ExtResource("1_asf6o")
+id = "sword_damage"
+max_quantity = 0
+name = "Урон от меча"
+description = "Увеличивает урон от меча на 15%"
