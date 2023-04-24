@@ -6,5 +6,5 @@
 script = ExtResource("1_hxg2f")
 id = "sword_rate"
 max_quantity = 5
-name = "Владение мечом"
+name = "Sword Speed"
 description = "Увеличивает скорость атаки мечом на 10%."
