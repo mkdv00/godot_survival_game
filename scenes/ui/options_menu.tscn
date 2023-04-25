@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4rduo6354pds"]
+[gd_scene load_steps=5 format=3 uid="uid://b4rduo6354pds"]
 
 [ext_resource type="Script" path="res://scenes/ui/options_menu.gd" id="1_0bgem"]
+[ext_resource type="PackedScene" uid="uid://cwts8nh36bmbe" path="res://scenes/ui/vignetter.tscn" id="2_0r33h"]
 [ext_resource type="TileSet" uid="uid://2ejdpbs2kv48" path="res://resources/tileset.tres" id="2_e6vkg"]
 [ext_resource type="PackedScene" uid="uid://cna8vth6ogp8l" path="res://scenes/ui/sound_button.tscn" id="3_8ogqd"]
 
@@ -40,6 +41,7 @@ theme_override_constants/separation = 24
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_type_variation = &"BlueOutlineLabel"
 theme_override_font_sizes/font_size = 32
 text = "Options"
 horizontal_alignment = 1
@@ -53,6 +55,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/SFXOptionsContainer"]
 layout_mode = 2
+theme_type_variation = &"BlueOutlineLabel"
 text = "SFX Volume"
 
 [node name="SFXSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/SFXOptionsContainer"]
@@ -66,6 +69,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MusicOptionsContainer"]
 layout_mode = 2
+theme_type_variation = &"BlueOutlineLabel"
 text = "Music Volume"
 
 [node name="MusicSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MusicOptionsContainer"]
@@ -79,6 +83,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/WindowOptionsContainer"]
 layout_mode = 2
+theme_type_variation = &"BlueOutlineLabel"
 text = "Window mode"
 
 [node name="WindowButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/WindowOptionsContainer" instance=ExtResource("3_8ogqd")]
@@ -93,3 +98,6 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Back"
+
+[node name="Vignetter" parent="." instance=ExtResource("2_0r33h")]
+layer = 2
