@@ -1,10 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://dlx8vugiu28uc"]
+[gd_scene load_steps=16 format=3 uid="uid://dlx8vugiu28uc"]
 
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_32dan"]
 [ext_resource type="Texture2D" uid="uid://bgiruwfm4tk5g" path="res://scenes/game_object/player/player.png" id="1_sh8ih"]
 [ext_resource type="PackedScene" uid="uid://b13t0qtl84wdf" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_2pape"]
 [ext_resource type="PackedScene" uid="uid://tf1qwo4w6vwu" path="res://scenes/component/velocity_component.tscn" id="2_qlslk"]
 [ext_resource type="PackedScene" uid="uid://bbvvl8ntbttm6" path="res://scenes/component/health_component.tscn" id="2_rngrd"]
+[ext_resource type="PackedScene" uid="uid://31pdpuu6wtbg" path="res://scenes/component/audio_stream_player_2d_component.tscn" id="5_kmj2g"]
+[ext_resource type="AudioStream" uid="uid://blqobw1g30ipb" path="res://assets/SFX/15_human_dash_1.wav" id="6_cnxvs"]
+[ext_resource type="AudioStream" uid="uid://dj3dudmoq80mh" path="res://assets/SFX/15_human_dash_2.wav" id="7_pb2cx"]
 
 [sub_resource type="Animation" id="Animation_8oaph"]
 length = 0.001
@@ -129,6 +132,9 @@ acceleration = 25.0
 [node name="Abilities" type="Node" parent="."]
 
 [node name="SwordAbilityController" parent="Abilities" instance=ExtResource("2_2pape")]
+
+[node name="AudioStreamPlayer2DComponent" parent="." instance=ExtResource("5_kmj2g")]
+streams = Array[AudioStream]([ExtResource("6_cnxvs"), ExtResource("7_pb2cx")])
 
 [node name="DamageIntervalTimer" type="Timer" parent="."]
 wait_time = 0.5

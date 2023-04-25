@@ -1,13 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch4j2mxmw0ej4"]
+[gd_scene load_steps=7 format=3 uid="uid://ch4j2mxmw0ej4"]
 
 [ext_resource type="Texture2D" uid="uid://cpg06d7ifw33s" path="res://scenes/game_object/experience_vial/experience_vial.png" id="1_1cims"]
 [ext_resource type="Script" path="res://scenes/game_object/experience_vial/experience_vial.gd" id="1_c1fnj"]
+[ext_resource type="PackedScene" uid="uid://31pdpuu6wtbg" path="res://scenes/component/audio_stream_player_2d_component.tscn" id="2_4n5ar"]
+[ext_resource type="AudioStream" uid="uid://djns74cncyi3t" path="res://assets/SFX/08_human_charge_1.wav" id="3_lptk8"]
+[ext_resource type="AudioStream" uid="uid://cprj7stgtm4gb" path="res://assets/SFX/08_human_charge_2.wav" id="4_y6rtg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1jhus"]
 radius = 16.0
 
 [node name="ExperienceVial" type="Node2D"]
 script = ExtResource("1_c1fnj")
+
+[node name="AudioStreamPlayer2DComponent" parent="." instance=ExtResource("2_4n5ar")]
+volume_db = -15.0
+streams = Array[AudioStream]([ExtResource("3_lptk8"), ExtResource("4_y6rtg")])
+min_pitch = 0.7
+max_pitch = 0.9
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0

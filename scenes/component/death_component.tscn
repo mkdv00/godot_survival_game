@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvj717q4xbwtg"]
+[gd_scene load_steps=16 format=3 uid="uid://ckpvsp15hkj0i"]
 
 [ext_resource type="Texture2D" uid="uid://b3a7etor3be44" path="res://scenes/game_object/basic_enemy/basic_enemy.png" id="1_2dbpa"]
 [ext_resource type="Script" path="res://scenes/component/death_component.gd" id="1_r3o3v"]
 [ext_resource type="PackedScene" uid="uid://31pdpuu6wtbg" path="res://scenes/component/audio_stream_player_2d_component.tscn" id="3_fv5uq"]
-[ext_resource type="AudioStream" uid="uid://dbmrjujt3qhd6" path="res://assets/audio/footstep_carpet_000.ogg" id="4_3l01j"]
-[ext_resource type="AudioStream" uid="uid://c0lajkd8rw4ey" path="res://assets/audio/footstep_carpet_001.ogg" id="5_ajgc5"]
-[ext_resource type="AudioStream" uid="uid://dw7pbr0qe7srp" path="res://assets/audio/footstep_carpet_002.ogg" id="6_cqwst"]
-[ext_resource type="AudioStream" uid="uid://fxi32j1m7xdc" path="res://assets/audio/footstep_carpet_003.ogg" id="7_nxhag"]
-[ext_resource type="AudioStream" uid="uid://dn1uw3wa2ddc6" path="res://assets/audio/footstep_carpet_004.ogg" id="8_uv1lm"]
+[ext_resource type="AudioStream" uid="uid://bfd1pkgrch8m1" path="res://assets/SFX/07_human_atk_sword_1.wav" id="4_ae7a0"]
+[ext_resource type="AudioStream" uid="uid://b2gw2ot324f6i" path="res://assets/SFX/07_human_atk_sword_2.wav" id="5_bne87"]
+[ext_resource type="AudioStream" uid="uid://bq1jw71rt0to5" path="res://assets/SFX/07_human_atk_sword_3.wav" id="6_2fqmi"]
+[ext_resource type="AudioStream" uid="uid://vbprhnuajtnk" path="res://assets/SFX/27_sword_miss_1.wav" id="7_2o0el"]
+[ext_resource type="AudioStream" uid="uid://bpo6jmwrhsf8u" path="res://assets/SFX/27_sword_miss_2.wav" id="8_g4p4i"]
+[ext_resource type="AudioStream" uid="uid://cvfwm56wihng8" path="res://assets/SFX/27_sword_miss_3.wav" id="9_5ioml"]
 
 [sub_resource type="Animation" id="Animation_rnjrt"]
 length = 0.001
@@ -98,5 +99,4 @@ fixed_fps = 0
 interpolate = false
 
 [node name="HitRandomAudioPlayerComponent" parent="." instance=ExtResource("3_fv5uq")]
-max_distance = 300.0
-streams = Array[AudioStream]([ExtResource("4_3l01j"), ExtResource("5_ajgc5"), ExtResource("6_cqwst"), ExtResource("7_nxhag"), ExtResource("8_uv1lm")])
+streams = Array[AudioStream]([ExtResource("4_ae7a0"), ExtResource("5_bne87"), ExtResource("6_2fqmi"), ExtResource("7_2o0el"), ExtResource("8_g4p4i"), ExtResource("9_5ioml")])
