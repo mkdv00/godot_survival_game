@@ -12,6 +12,8 @@ config_version=5
 
 config/name="Survival Game"
 run/main_scene="res://scenes/ui/main_menu.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="ArenaSurvival"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
