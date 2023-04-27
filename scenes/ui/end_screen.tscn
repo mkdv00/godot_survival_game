@@ -61,7 +61,7 @@ _data = {
 "out": SubResource("Animation_gh3v3")
 }
 
-[node name="VictoryScreen" type="CanvasLayer"]
+[node name="EndScreen" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_m0b0s")
 
@@ -134,12 +134,12 @@ vertical_alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="RestartButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_6ru23")]
+[node name="ContinueButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_6ru23")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Перезапустить"
+text = "Continue"
 
 [node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_6ru23")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Выйти"
+text = "Quit to menu"

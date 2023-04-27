@@ -5,6 +5,7 @@ var options_scene = preload("res://scenes/ui/options_menu.tscn")
 
 func _ready():
 	$%PlayButton.pressed.connect(on_play_button)
+	$%UpgradesButton.pressed.connect(on_upgrades_button)
 	$%OptionsButton.pressed.connect(on_options_button)
 	$%QuitButton.pressed.connect(on_quit_button)
 
@@ -13,6 +14,12 @@ func on_play_button():
 	ScreenTransition.transition()
 	await ScreenTransition.transition_halfway
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+
+
+func on_upgrades_button():
+	ScreenTransition.transition()
+	await ScreenTransition.transition_halfway
+	get_tree().change_scene_to_file("res://scenes/ui/meta_menu.tscn")
 
 
 func on_options_button():

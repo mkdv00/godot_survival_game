@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/game_object/basic_enemy/basic_enemy.gd" id="1_yy6ys"]
 [ext_resource type="PackedScene" uid="uid://bbvvl8ntbttm6" path="res://scenes/component/health_component.tscn" id="2_2hn1g"]
 [ext_resource type="PackedScene" uid="uid://n26exn856d80" path="res://scenes/component/vial_drop_component.tscn" id="3_8buw5"]
-[ext_resource type="PackedScene" path="res://scenes/component/death_component.tscn" id="4_6j6cm"]
+[ext_resource type="PackedScene" uid="uid://ckpvsp15hkj0i" path="res://scenes/component/death_component.tscn" id="4_6j6cm"]
 [ext_resource type="PackedScene" uid="uid://tf1qwo4w6vwu" path="res://scenes/component/velocity_component.tscn" id="4_87o7i"]
 [ext_resource type="PackedScene" uid="uid://cgu80gp6edys5" path="res://scenes/component/hurtbox_component.tscn" id="4_uu5gl"]
 [ext_resource type="Shader" path="res://scenes/component/hit_flash_component.gdshader" id="6_ylvdu"]
@@ -79,7 +79,7 @@ _data = {
 "walk": SubResource("Animation_nu727")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ahi2t"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bbt8k"]
 resource_local_to_scene = true
 shader = ExtResource("6_ylvdu")
 shader_parameter/lerp_percent = null
@@ -114,7 +114,7 @@ health_component = NodePath("../HealthComponent")
 [node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("7_liaw7")]
 health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
-hit_flash_material = SubResource("ShaderMaterial_ahi2t")
+hit_flash_material = SubResource("ShaderMaterial_bbt8k")
 
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_6j6cm")]
 health_component = NodePath("../HealthComponent")
