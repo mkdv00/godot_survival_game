@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbbukf8uhmqv6"]
 
 [ext_resource type="Script" path="res://scenes/manager/enemy_manager.gd" id="1_g5i6k"]
-[ext_resource type="PackedScene" uid="uid://8y8brwwwekss" path="res://scenes/game_object/basic_enemy/basic_enemy.tscn" id="2_8il6a"]
-[ext_resource type="PackedScene" uid="uid://2flit6k2gpa8" path="res://scenes/game_object/wizard_enemy/wizard_enemy.tscn" id="2_hml5w"]
+[ext_resource type="PackedScene" uid="uid://b0m58xcdv060y" path="res://scenes/game_object/basic_enemy/basic_enemy.tscn" id="2_8il6a"]
+[ext_resource type="PackedScene" uid="uid://dc4mgumpxayax" path="res://scenes/game_object/wizard_enemy/wizard_enemy.tscn" id="2_hml5w"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_g5i6k")
