@@ -61,3 +61,4 @@ text = "Quit
 "
 
 [node name="Vignetter" parent="." instance=ExtResource("2_c3q70")]
+layer = 2
